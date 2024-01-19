@@ -4,7 +4,7 @@ router.get('/api/blogs', async (req, res,next) => {
     try{
     const blogs = await Blog.find({});
     res.json(blogs);}
-    catch{
+    catch(error){
         next(error)
     }
   });
